@@ -13,6 +13,10 @@ RSpec.describe "Viewing details for a Cat" do
     end
   end
 
+  it "displays the breed for the cat" do
+    expect(page).to have_content(cat.breed.breed_name)
+  end
+
   it "displays the date of birth for the cat" do
     expect(page).to have_content(cat.date_of_birth)
   end

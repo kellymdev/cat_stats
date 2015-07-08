@@ -1,5 +1,7 @@
 <h2><%= @cat.pet_name %></h2>
 
+<p><%= @cat.breed.breed_name %></p>
+
 <% if @cat.registered? %>
   <p>Registered Name: <%= @cat.registered_name %></p>
   <p>Registration Number: <%= @cat.registration_number %></p>

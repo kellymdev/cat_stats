@@ -1,6 +1,7 @@
 class Cat < ActiveRecord::Base
+  belongs_to :breed
+
   validates :pet_name, presence: true
-  validates :registration_number, uniqueness: true
   validates :date_of_birth, presence: true
 
   def registered?
