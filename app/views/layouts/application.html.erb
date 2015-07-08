@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <title>CatStats</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <head>
+    <title>CatStats</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <h1><%= link_to "Cat Stats", cats_path %></h1>
+
+    <%= yield %>
+
+  </body>
+
 </html>

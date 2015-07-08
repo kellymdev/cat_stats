@@ -109,13 +109,13 @@
 
 #-------------Seed data for Titles-----------------------------------------
 
-# titles = ([
+# titles = Title.create([
 #             { title: "Silver Double Grand Premier"},
 #             { title: "Grand Champion" }
 #           ])
 
 
-#-------------Seed data to assign Titles to Cats-----------------------------------------
+# -------------Seed data to assign Titles to Cats-----------------------------------------
 
 # madison = Cat.find_by_pet_name("Madison")
 # madison.title = Title.find_by_title("Silver Double Grand Premier")

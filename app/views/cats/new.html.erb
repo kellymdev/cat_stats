@@ -1,0 +1,9 @@
+<%= form_for :cats, url: :cats do |f| %>
+  <%= f.label :pet_name %>
+  <%= f.text_field :pet_name %>
+
+  <%= f.label :date_of_birth %>
+  <%= f.text_field :date_of_birth %>
+
+  <%= f.submit "Add Cat" %>
+<% end %>
