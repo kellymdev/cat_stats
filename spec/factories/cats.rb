@@ -3,6 +3,7 @@ FactoryGirl.define do
     pet_name "Madison"
     date_of_birth "2001-10-12"
     breed
+    coat_colour
 
     factory :registered_cat do
       registered_name "Askari Dashin Bit O' Stuff"
