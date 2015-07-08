@@ -17,6 +17,10 @@ RSpec.describe "Viewing the list of Cats" do
       expect(page).to have_content(cat.pet_name)
     end
 
+    it "displays the title for the cat" do
+      expect(page).to have_content(cat.title.title)
+    end
+
     it "displays the registered name for the cat" do
       expect(page).to have_content(cat.registered_name)
     end

@@ -3,7 +3,7 @@
 <ul>
   <% @cats.each do |cat| %>
     <li><%= cat.pet_name %></li>
-    <li><%= cat.registered_name %></li>
+    <li><%= cat.title.title %> <%= cat.registered_name %></li>
     <li><%= cat.registration_number %></li>
   <% end %>
 </ul>
