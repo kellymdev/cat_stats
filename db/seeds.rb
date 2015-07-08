@@ -105,3 +105,22 @@
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.coat_colour = CoatColour.find_by_colour("Lilac")
 # phoebe.save
+
+
+#-------------Seed data for Titles-----------------------------------------
+
+# titles = ([
+#             { title: "Silver Double Grand Premier"},
+#             { title: "Grand Champion" }
+#           ])
+
+
+#-------------Seed data to assign Titles to Cats-----------------------------------------
+
+# madison = Cat.find_by_pet_name("Madison")
+# madison.title = Title.find_by_title("Silver Double Grand Premier")
+# madison.save
+
+# phoebe = Cat.find_by_pet_name("Phoebe Jayne")
+# phoebe.title = Title.find_by_title("Grand Champion")
+# phoebe.save
