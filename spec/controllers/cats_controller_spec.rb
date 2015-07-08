@@ -69,6 +69,20 @@ RSpec.describe CatsController do
         expect(response).to redirect_to("/cats/#{cat.id}")
       end
     end
+
+    context "with invalid params" do
+      before do
+        post :create, { cat: { pet_name: "" } }
+      end
+
+      it "returns http status 400" do
+        expect(response).to have_http_status(400)
+      end
+
+      it "displays the new cat form" do
+        expect(response).to render_template(:new)
+      end
+    end
   end
 
   after do

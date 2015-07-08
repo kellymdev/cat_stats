@@ -8,6 +8,7 @@ class CatsController < ApplicationController
   end
 
   def new
+    @cat = Cat.new
   end
 
   def create
@@ -16,7 +17,7 @@ class CatsController < ApplicationController
     if @cat.save
       redirect_to @cat, notice: "Cat was successfully added"
     else
-      render :new
+      render :new, status: 400
     end
   end
 
