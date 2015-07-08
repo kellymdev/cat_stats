@@ -1,9 +1,46 @@
-<%= form_for :cats, url: :cats do |f| %>
-  <%= f.label :pet_name %>
-  <%= f.text_field :pet_name %>
+<%= form_for :cat, url: cats_path do |f| %>
 
-  <%= f.label :date_of_birth %>
-  <%= f.text_field :date_of_birth %>
+  <div class="field">
+    <%= f.label :pet_name %>
+    <%= f.text_field :pet_name %>
+  </div>
 
-  <%= f.submit "Add Cat" %>
+  <div class="field">
+    <%= f.label :breed %>
+    <%= f.collection_select(:breed_id, Breed.all, :id, :breed_name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :coat_colour %>
+    <%= f.collection_select(:coat_colour_id, CoatColour.all, :id, :colour) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :registered_name %>
+    <%= f.text_field :registered_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.collection_select(:title_id, Title.all, :id, :title) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :registration_number %>
+    <%= f.text_field :registration_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_of_birth %>
+    <%= f.text_field :date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_of_death %>
+    <%= f.text_field :date_of_death %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Cat" %>
+  </div>
 <% end %>

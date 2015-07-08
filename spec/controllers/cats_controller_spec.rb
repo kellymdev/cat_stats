@@ -55,20 +55,23 @@ RSpec.describe CatsController do
 
   describe "POST #create" do
     context "with valid params" do
-      let!(:valid_cat_params) { attributes_for(:cat) }
       before do
-        post :create, valid_cat_params
+        @valid_cat_params = attributes_for(:registered_cat)
+        post :create, { cat: @valid_cat_params }
       end
 
       it "creates a new cat" do
-      end
-
-      it "assigns the newly created cat as @cat" do
-        expect(assigns(:cat)).to be_a(Cat)
+        expect(Cat.find_by_registration_number(@valid_cat_params[:registration_number])).to be_truthy
       end
 
       it "redirects to the details page for the newly created cat" do
+        cat = Cat.find_by_registration_number(@valid_cat_params[:registration_number])
+        expect(response).to redirect_to("/cats/#{cat.id}")
       end
     end
+  end
+
+  after do
+    Cat.destroy_all
   end
 end
