@@ -13,4 +13,8 @@ class Cat < ActiveRecord::Base
   def deceased?
     self.date_of_death != nil
   end
+
+  def has_title?
+    self.title != nil
+  end
 end

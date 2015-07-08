@@ -2,8 +2,11 @@
 
 <p><%= @cat.coat_colour.colour %> <%= @cat.breed.breed_name %></p>
 
-<% if @cat.registered? %>
+<% if @cat.has_title? %>
   <p>Title: <%= @cat.title.title %></p>
+<% end %>
+
+<% if @cat.registered? %>
   <p>Registered Name: <%= @cat.registered_name %></p>
   <p>Registration Number: <%= @cat.registration_number %></p>
 <% end %>

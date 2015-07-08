@@ -2,8 +2,17 @@
 
 <ul>
   <% @cats.each do |cat| %>
-    <li><%= cat.pet_name %></li>
-    <li><%= cat.title.title %> <%= cat.registered_name %></li>
-    <li><%= cat.registration_number %></li>
+    <li>
+      <p><%= link_to cat.pet_name, cat_path(cat) %></p>
+      <% if cat.registered? %>
+        <p>
+          <% if cat.has_title? %>
+            <%= cat.title.title %>
+          <% end %>
+          <%= cat.registered_name %>
+        </p>
+        <p><%= cat.registration_number %></p>
+      <% end %>
+    </li>
   <% end %>
 </ul>

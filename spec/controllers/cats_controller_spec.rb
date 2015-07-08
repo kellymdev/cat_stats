@@ -38,4 +38,37 @@ RSpec.describe CatsController do
       expect(response).to render_template(:show)
     end
   end
+
+  describe "GET #new" do
+    before do
+      get :new
+    end
+
+    it "should return http status 200" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "should display a form to create a new cat" do
+      expect(response).to render_template(:new)
+    end
+  end
+
+  describe "POST #create" do
+    context "with valid params" do
+      let!(:valid_cat_params) { attributes_for(:cat) }
+      before do
+        post :create, valid_cat_params
+      end
+
+      it "creates a new cat" do
+      end
+
+      it "assigns the newly created cat as @cat" do
+        expect(assigns(:cat)).to be_a(Cat)
+      end
+
+      it "redirects to the details page for the newly created cat" do
+      end
+    end
+  end
 end
