@@ -32,6 +32,10 @@ RSpec.describe "Viewing details for a Cat" do
       visit "/cats/#{registered_cat.id}"
     end
 
+    it "displays the title for the cat" do
+      expect(page).to have_content(registered_cat.title.title)
+    end
+
     it "displays the registered name for the cat" do
       expect(page).to have_content(registered_cat.registered_name)
     end

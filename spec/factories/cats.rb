@@ -6,6 +6,7 @@ FactoryGirl.define do
     coat_colour
 
     factory :registered_cat do
+      title
       registered_name "Askari Dashin Bit O' Stuff"
       registration_number "LH1234"
     end
