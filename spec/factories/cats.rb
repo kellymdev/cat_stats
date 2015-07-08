@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :cat do
     pet_name "Madison"
     date_of_birth "2001-10-12"
+    date_of_death ""
     breed
     coat_colour
 
