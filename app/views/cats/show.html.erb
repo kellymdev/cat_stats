@@ -1,0 +1,12 @@
+<h2><%= @cat.pet_name %></h2>
+
+<% if @cat.registered? %>
+  <p>Registered Name: <%= @cat.registered_name %></p>
+  <p>Registration Number: <%= @cat.registration_number %></p>
+<% end %>
+
+<p>Date of Birth: <%= @cat.date_of_birth %></p>
+
+<% if @cat.deceased? %>
+  <p>Date of Death: <%= @cat.date_of_death %></p>
+<% end %>
