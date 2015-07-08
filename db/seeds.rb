@@ -43,26 +43,65 @@
 
 #-------------Seed data to assign Breeds to Cats-----------------------------------------
 
-minnie = Cat.find_by_pet_name("Minnie Louise")
-minnie.breed = Breed.find_by_breed_name("Domestic Shorthair")
-minnie.save
+# minnie = Cat.find_by_pet_name("Minnie Louise")
+# minnie.breed = Breed.find_by_breed_name("Domestic Shorthair")
+# minnie.save
 
-bianca = Cat.find_by_pet_name("Bianca Maree")
-bianca.breed = Breed.find_by_breed_name("Oriental Cross")
-bianca.save
+# bianca = Cat.find_by_pet_name("Bianca Maree")
+# bianca.breed = Breed.find_by_breed_name("Oriental Cross")
+# bianca.save
 
-spot = Cat.find_by_pet_name("Spot")
-spot.breed = Breed.find_by_breed_name("Persian")
-spot.save
+# spot = Cat.find_by_pet_name("Spot")
+# spot.breed = Breed.find_by_breed_name("Persian")
+# spot.save
 
-madison = Cat.find_by_pet_name("Madison")
-madison.breed = Breed.find_by_breed_name("Exotic Shorthair")
-madison.save
+# madison = Cat.find_by_pet_name("Madison")
+# madison.breed = Breed.find_by_breed_name("Exotic Shorthair")
+# madison.save
 
-mickey = Cat.find_by_pet_name("Mickey")
-mickey.breed = Breed.find_by_breed_name("Persian")
-mickey.save
+# mickey = Cat.find_by_pet_name("Mickey")
+# mickey.breed = Breed.find_by_breed_name("Persian")
+# mickey.save
 
-phoebe = Cat.find_by_pet_name("Phoebe Jayne")
-phoebe.breed = Breed.find_by_breed_name("Exotic Shorthair")
-phoebe.save
+# phoebe = Cat.find_by_pet_name("Phoebe Jayne")
+# phoebe.breed = Breed.find_by_breed_name("Exotic Shorthair")
+# phoebe.save
+
+
+#-------------Seed data for Coat Colours-----------------------------------------
+
+# colours = CoatColour.create([
+#                               { colour: "Brown Tabby Bicolour"},
+#                               { colour: "Tortoiseshell Tabby Bicolour" },
+#                               { colour: "Blue Harlequin" },
+#                               { colour: "Blue" },
+#                               { colour: "Blue Bicolour" },
+#                               { colour: "Lilac" }
+#                             ])
+
+
+#-------------Seed data to assign Coat Colours to Cats-----------------------------------------
+
+# minnie = Cat.find_by_pet_name("Minnie Louise")
+# minnie.coat_colour = CoatColour.find_by_colour("Brown Tabby Bicolour")
+# minnie.save
+
+# bianca = Cat.find_by_pet_name("Bianca Maree")
+# bianca.coat_colour = CoatColour.find_by_colour("Tortoiseshell Tabby Bicolour")
+# bianca.save
+
+# spot = Cat.find_by_pet_name("Spot")
+# spot.coat_colour = CoatColour.find_by_colour("Blue Harlequin")
+# spot.save
+
+# madison = Cat.find_by_pet_name("Madison")
+# madison.coat_colour = CoatColour.find_by_colour("Blue")
+# madison.save
+
+# mickey = Cat.find_by_pet_name("Mickey")
+# mickey.coat_colour = CoatColour.find_by_colour("Blue Bicolour")
+# mickey.save
+
+# phoebe = Cat.find_by_pet_name("Phoebe Jayne")
+# phoebe.coat_colour = CoatColour.find_by_colour("Lilac")
+# phoebe.save
