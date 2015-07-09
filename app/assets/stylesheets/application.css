@@ -23,10 +23,16 @@ body {
   border-radius: 5px;
 }
 
-.header a {
-  color: #e8eced;
+.header a,
+.header a.visited {
+  color: #a4b7bb;
   text-decoration: none;
   font-family: 'Dosis', sans-serif;
+}
+
+.header h1 {
+  font-size: 3em;
+  border-bottom: 5px dashed #a4b7bb;
 }
 
 .title {
@@ -44,6 +50,11 @@ h2, h3, p {
   color: #35262d;
 }
 
+.alert,
+.notice {
+  color: #76A0B0;
+}
+
 
 /*-----------Nav Styles----------------------------*/
 
@@ -59,8 +70,10 @@ nav li {
   border: 1px dashed #e8eced;
   border-radius: 5px;
   padding: 4px 6px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
-nav a {
-  /*text-decoration: none;*/
+#nav-links a {
+  color: #e8eced;
 }
