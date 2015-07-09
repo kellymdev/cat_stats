@@ -5,6 +5,7 @@ RSpec.describe "Creating a new cat" do
     let(:valid_cat_params) { build(:cat) }
     let!(:coat_colour) { create(:coat_colour) }
     let!(:breed) { create(:breed) }
+    let!(:gender) { create(:gender) }
 
     before do
       visit '/cats/new'
@@ -12,6 +13,7 @@ RSpec.describe "Creating a new cat" do
 
     it "allows you to enter valid details for an unregistered cat" do
       fill_in "Pet name", with: valid_cat_params.pet_name
+      select('Neuter', from: 'cat_gender_id')
       select('Persian', :from => 'cat_breed_id')
       select('Lilac', :from => 'cat_coat_colour_id')
       fill_in "Date of birth", with: valid_cat_params.date_of_birth
@@ -24,5 +26,6 @@ RSpec.describe "Creating a new cat" do
     Cat.destroy_all
     Breed.destroy_all
     CoatColour.destroy_all
+    Gender.destroy_all
   end
 end

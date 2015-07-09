@@ -5,6 +5,7 @@
 <div class="cat-details">
   <h2><%= @cat.pet_name %></h2>
   <p><%= @cat.coat_colour.colour %> <%= @cat.breed.breed_name %></p>
+  <p>Gender: <%= @cat.gender.gender %></p>
 
   <% if @cat.has_title? %>
     <p>Title: <%= @cat.title.title %></p>

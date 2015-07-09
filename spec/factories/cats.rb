@@ -5,6 +5,7 @@ FactoryGirl.define do
     date_of_death ""
     breed
     coat_colour
+    gender
 
     factory :registered_cat do
       title

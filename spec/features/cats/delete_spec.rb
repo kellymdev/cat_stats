@@ -3,11 +3,13 @@ require 'rails_helper'
 RSpec.describe "Deleting a cat", :js => true do
   let(:breed) { build(:breed) }
   let(:coat_colour) { build(:coat_colour) }
+  let(:gender) { build(:gender) }
 
   before do
     @breed = Breed.create(breed.attributes)
     @coat_colour = CoatColour.create(coat_colour.attributes)
-    @valid_cat_params = attributes_for(:registered_cat, breed_id: @breed.id, coat_colour_id: @coat_colour.id)
+    @gender = Gender.create(gender.attributes)
+    @valid_cat_params = attributes_for(:registered_cat, breed_id: @breed.id, coat_colour_id: @coat_colour.id, gender_id: @gender.id)
     @cat = Cat.create! @valid_cat_params
     visit "/cats"
     click_link @cat.pet_name
@@ -28,5 +30,6 @@ RSpec.describe "Deleting a cat", :js => true do
     Cat.destroy_all
     Breed.destroy_all
     CoatColour.destroy_all
+    Gender.destroy_all
   end
 end
