@@ -26,5 +26,7 @@ RSpec.describe "Deleting a cat", :js => true do
 
   after do
     Cat.destroy_all
+    Breed.destroy_all
+    CoatColour.destroy_all
   end
 end

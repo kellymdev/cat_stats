@@ -34,4 +34,10 @@ RSpec.describe Cat, type: :model do
       expect(cat.deceased?).to be false
     end
   end
+
+  after do
+    Cat.destroy_all
+    Breed.destroy_all
+    CoatColour.destroy_all
+  end
 end
