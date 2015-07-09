@@ -52,7 +52,8 @@ select {
   display: block;
 }
 
-select[type="option"] {
+select[type="option"],
+#coat-colour {
   font-family: 'Lato', sans-serif;
 }
 
