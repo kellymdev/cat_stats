@@ -53,7 +53,7 @@ select {
 }
 
 select[type="option"],
-#coat-colour {
+#cat_coat_colour_id {
   font-family: 'Lato', sans-serif;
 }
 
