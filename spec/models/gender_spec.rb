@@ -6,4 +6,8 @@ RSpec.describe Gender, type: :model do
   it "should have a gender" do
     should validate_presence_of(:gender)
   end
+
+  after do
+    Gender.destroy_all
+  end
 end

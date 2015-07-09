@@ -6,6 +6,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :gender %>
+    <%= f.collection_select(:gender_id, Gender.all.order(:gender), :id, :gender, { include_blank: true } ) %>
+  </div>
+
+  <div class="field">
     <%= f.label :breed %>
     <%= f.collection_select(:breed_id, Breed.all.order(:breed_name), :id, :breed_name, { include_blank: true } ) %>
   </div>

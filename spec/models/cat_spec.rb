@@ -39,5 +39,6 @@ RSpec.describe Cat, type: :model do
     Cat.destroy_all
     Breed.destroy_all
     CoatColour.destroy_all
+    Gender.destroy_all
   end
 end
