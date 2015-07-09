@@ -37,4 +37,8 @@ RSpec.describe "Viewing the list of Cats" do
       expect(page).to have_content(unregistered_cat.pet_name)
     end
   end
+
+  after do
+    Cat.destroy_all
+  end
 end

@@ -15,8 +15,12 @@ RSpec.describe "Creating a new cat" do
       select('Persian', :from => 'cat_breed_id')
       select('Lilac', :from => 'cat_coat_colour_id')
       fill_in "Date of birth", with: valid_cat_params.date_of_birth
-      click_button "Add Cat"
+      click_button "Create Cat"
       expect(page).to have_content(valid_cat_params.pet_name)
     end
+  end
+
+  after do
+    Cat.destroy_all
   end
 end

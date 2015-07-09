@@ -85,6 +85,60 @@ RSpec.describe CatsController do
     end
   end
 
+  describe "DELETE #destroy" do
+
+    before do
+      @valid_cat_params = attributes_for(:registered_cat)
+      @cat = Cat.create! @valid_cat_params
+    end
+
+    it "deletes the selected cat" do
+      expect {
+        delete :destroy, {id: cat.id}
+      }.to change(Cat, :count).by(-1)
+    end
+
+    it "redirects to the index page" do
+      expect(delete :destroy, {id: @cat.id}).to redirect_to(cats_path)
+    end
+  end
+
+  describe "GET #edit" do
+    before do
+      @valid_cat_params = attributes_for(:registered_cat)
+      @cat = Cat.create! @valid_cat_params
+      get :edit, { :id => @cat.to_param }
+    end
+
+    it "should return http status 200" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "should display a form to edit the specified cat" do
+      expect(response).to render_template(:edit)
+    end
+  end
+
+  describe "PUT #update" do
+    context "valid params" do
+      before do
+        @valid_cat_params = attributes_for(:registered_cat)
+        @updated_params = attributes_for(:deceased_cat)
+        @cat = Cat.create! @valid_cat_params
+        put :update, { :id => @cat.id, cat: @updated_params }
+        @cat.reload
+      end
+
+      it "should return http status 302" do
+        expect(response).to have_http_status(302)
+      end
+
+      it "should redirect to the show cat page" do
+        expect(response).to redirect_to(cat_path(@cat))
+      end
+    end
+  end
+
   after do
     Cat.destroy_all
   end

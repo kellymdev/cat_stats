@@ -23,4 +23,5 @@ group :test do
   gem 'faker'
   gem 'capybara', '~> 2.4.4'
   gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
