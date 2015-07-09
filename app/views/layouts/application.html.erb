@@ -19,7 +19,7 @@
         </div>
 
         <nav>
-          <ul>
+          <ul id="nav-links">
             <li><%= link_to "List Cats", cats_path %></li>
             <li><%= link_to "Add Cat", new_cat_path %></li>
           </ul>
@@ -27,8 +27,8 @@
       </div>
 
       <div class="cats">
-        <p><%= notice %></p>
-        <p><%= alert %></p>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
         <%= yield %>
 

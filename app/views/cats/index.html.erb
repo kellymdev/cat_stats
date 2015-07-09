@@ -3,16 +3,15 @@
 <ul class="cat-list">
   <% @cats.each do |cat| %>
     <li>
-      <p><%= link_to cat.pet_name, cat_path(cat) %></p>
-      <% if cat.registered? %>
-        <p>
+      <p><%= link_to cat.pet_name, cat_path(cat) %>
+        <% if cat.registered? %> -
           <% if cat.has_title? %>
             <%= cat.title.title %>
           <% end %>
-          <%= cat.registered_name %>
-        </p>
-        <p><%= cat.registration_number %></p>
-      <% end %>
+          <%= cat.registered_name %> -
+          <%= cat.registration_number %>
+        <% end %>
+      </p>
     </li>
   <% end %>
 </ul>

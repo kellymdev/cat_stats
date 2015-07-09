@@ -7,7 +7,7 @@ class Cat < ActiveRecord::Base
   validates :date_of_birth, presence: true
 
   def registered?
-    self.registration_number != nil && self.registered_name != nil
+    self.registration_number != nil && self.registered_name.length > 1
   end
 
   def deceased?
