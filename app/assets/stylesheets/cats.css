@@ -1,3 +1,22 @@
+/*-----------Cat List Styles-----------------------*/
+
+.cat-list {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+.cat-list li {
+  border-bottom: 1px dashed #35262d;
+  padding-bottom: 15px;
+}
+
+.cat-list a {
+  color: #76A0B0;
+  text-decoration: none;
+}
+
+
 /*-----------Button Styles-------------------------*/
 
 .cat-button,

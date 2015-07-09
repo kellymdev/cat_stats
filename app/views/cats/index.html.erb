@@ -1,6 +1,6 @@
 <h2>Cats</h2>
 
-<ul>
+<ul class="cat-list">
   <% @cats.each do |cat| %>
     <li>
       <p><%= link_to cat.pet_name, cat_path(cat) %></p>
