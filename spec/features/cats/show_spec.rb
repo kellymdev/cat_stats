@@ -80,4 +80,8 @@ RSpec.describe "Viewing details for a Cat" do
       expect(page).to_not have_content("Date of Death:")
     end
   end
+
+  after do
+    Cat.destroy_all
+  end
 end
