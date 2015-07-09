@@ -65,3 +65,21 @@ label {
   display: block;
   margin: 12px 0 4px 0;
 }
+
+
+/*-----------Cat Details Styles--------------------*/
+
+.cat-image {
+  float: left;
+  width: 45%;
+  margin-bottom: 40px;
+}
+
+.cat-image img {
+  max-width: 100%;
+}
+
+.cat-details {
+  float: right;
+  width: 50%;
+}
