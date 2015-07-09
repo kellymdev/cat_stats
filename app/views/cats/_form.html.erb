@@ -7,12 +7,12 @@
 
   <div class="field">
     <%= f.label :breed %>
-    <%= f.collection_select(:breed_id, Breed.all.order(:breed_name), :id, :breed_name, { include_blank: true }, { id: "breed" } ) %>
+    <%= f.collection_select(:breed_id, Breed.all.order(:breed_name), :id, :breed_name, { include_blank: true } ) %>
   </div>
 
   <div class="field">
     <%= f.label :coat_colour %>
-    <%= f.collection_select(:coat_colour_id, CoatColour.all.order(:colour), :id, :colour, { include_blank: true }, { id: "coat-colour" } ) %>
+    <%= f.collection_select(:coat_colour_id, CoatColour.all.order(:colour), :id, :colour, { include_blank: true } ) %>
   </div>
 
   <div class="field">
@@ -22,7 +22,7 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.collection_select(:title_id, Title.all.order(:title), :id, :title, { include_blank: true }, { id: "title" } ) %>
+    <%= f.collection_select(:title_id, Title.all.order(:title), :id, :title, { include_blank: true } ) %>
   </div>
 
   <div class="field">

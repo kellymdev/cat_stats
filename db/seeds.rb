@@ -124,3 +124,43 @@
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.title = Title.find_by_title("Grand Champion")
 # phoebe.save
+
+
+#-------------Seed data for Gender-----------------------------------------
+
+# genders = Gender.create([
+#                           { gender: "Female" },
+#                           { gender: "Male" },
+#                           { gender: "Neuter" },
+#                           { gender: "Spay" }
+#                         ])
+
+
+#-------------Seed data to assign Gender to Cats-------------------------------------
+
+# spay = Gender.find_by_gender("Spay")
+# neuter = Gender.find_by_gender("Neuter")
+
+# minnie = Cat.find_by_pet_name("Minnie Louise")
+# minnie.gender = spay
+# minnie.save
+
+# bianca = Cat.find_by_pet_name("Bianca Maree")
+# bianca.gender = spay
+# bianca.save
+
+# spot = Cat.find_by_pet_name("Spot")
+# spot.gender = neuter
+# spot.save
+
+# mickey = Cat.find_by_pet_name("Mickey")
+# mickey.gender = neuter
+# mickey.save
+
+# madison = Cat.find_by_pet_name("Madison")
+# madison.gender = neuter
+# madison.save
+
+# phoebe = Cat.find_by_pet_name("Phoebe Jayne")
+# phoebe.gender = spay
+# phoebe.save
