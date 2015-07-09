@@ -6,19 +6,32 @@
     <title>CatStats</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Lato' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <h1><%= link_to "Cat Stats", cats_path %></h1>
 
-    <%= link_to "Add Cat", new_cat_path %>
+    <div class="content">
+      <div class="header">
+        <div class="title">
+          <h1><%= link_to "Cat Stats", cats_path %></h1>
+        </div>
 
-    <p><%= notice %></p>
-    <p><%= alert %></p>
+        <nav>
+          <ul>
+            <li><%= link_to "Add Cat", new_cat_path %></li>
+          </ul>
+        </nav>
+      </div>
 
-    <%= yield %>
+      <div class="cats">
+        <p><%= notice %></p>
+        <p><%= alert %></p>
 
+        <%= yield %>
+
+      </div>
+    </div>
   </body>
-
 </html>

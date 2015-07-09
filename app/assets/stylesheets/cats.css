@@ -1,0 +1,48 @@
+/*-----------Button Styles-------------------------*/
+
+.cat-button,
+.cat-action {
+  margin: 30px 20px 0 0;
+  background-color: #a4b7bb;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cat-button,
+a.cat-action,
+a.cat-action.visited {
+  color: #35262d;
+}
+
+.cat-button,
+a.cat-action {
+  padding: 4px 6px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #35262d;
+  border: 1px dashed #35262d;
+}
+
+
+/*-----------Form Styles---------------------------*/
+
+form {
+  max-width: 300px;
+}
+
+select {
+  display: block;
+}
+
+select[type="option"] {
+  font-family: 'Lato', sans-serif;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 12px 0 4px 0;
+}
