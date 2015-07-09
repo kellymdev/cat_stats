@@ -40,5 +40,7 @@ RSpec.describe "Viewing the list of Cats" do
 
   after do
     Cat.destroy_all
+    Breed.destroy_all
+    CoatColour.destroy_all
   end
 end

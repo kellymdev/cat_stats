@@ -22,5 +22,7 @@ RSpec.describe "Creating a new cat" do
 
   after do
     Cat.destroy_all
+    Breed.destroy_all
+    CoatColour.destroy_all
   end
 end

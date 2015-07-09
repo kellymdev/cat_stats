@@ -6,4 +6,8 @@ RSpec.describe CoatColour, type: :model do
   it "should have a colour" do
     should validate_presence_of(:colour)
   end
+
+  after do
+    CoatColour.destroy_all
+  end
 end
