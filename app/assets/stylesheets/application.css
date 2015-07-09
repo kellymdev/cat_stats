@@ -32,6 +32,7 @@ body {
 
 .header h1 {
   font-size: 3em;
+  border-bottom: 5px dashed #a4b7bb;
 }
 
 .title {
