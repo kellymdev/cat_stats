@@ -4,7 +4,7 @@ class CatsController < ApplicationController
   end
 
   def show
-    @cat = Cat.find(params[:id])
+    @cat = Cat.find_by("id = ?", params[:id])
   end
 
   def new
@@ -21,13 +21,13 @@ class CatsController < ApplicationController
   end
 
   def destroy
-    @cat = Cat.find_by_id(params[:id])
+    @cat = Cat.find_by("id = ?", params[:id])
     @cat.destroy
     redirect_to cats_path, notice: "#{@cat.pet_name} was successfully deleted"
   end
 
   def edit
-    @cat = Cat.find_by_id(params[:id])
+    @cat = Cat.find_by("id = ?", params[:id])
     if @cat
       render :edit
     else
@@ -36,7 +36,7 @@ class CatsController < ApplicationController
   end
 
   def update
-    @cat = Cat.find_by_id(params[:id])
+    @cat = Cat.find_by("id = ?", params[:id])
     if @cat.update(cat_params)
       redirect_to @cat, notice: "Cat was successfully updated"
     else
