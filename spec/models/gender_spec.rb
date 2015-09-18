@@ -7,7 +7,6 @@ RSpec.describe Gender, type: :model do
     should validate_presence_of(:gender)
   end
 
-  after do
-    Gender.destroy_all
-  end
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
+  after { Gender.destroy_all }
 end

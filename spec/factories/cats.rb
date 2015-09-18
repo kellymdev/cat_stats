@@ -19,5 +19,4 @@ FactoryGirl.define do
       date_of_death "2015-05-21"
     end
   end
-
 end

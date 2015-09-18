@@ -7,7 +7,6 @@ RSpec.describe CoatColour, type: :model do
     should validate_presence_of(:colour)
   end
 
-  after do
-    CoatColour.destroy_all
-  end
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
+  after { CoatColour.destroy_all }
 end

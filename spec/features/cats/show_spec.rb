@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe "Viewing details for a Cat" do
   let!(:cat) { create(:cat) }
 
-  before do
-    visit "/cats/#{cat.id}"
-  end
+  before { visit "/cats/#{cat.id}" }
 
   it "displays the pet name for the cat" do
     within('h2') do
@@ -32,9 +30,7 @@ RSpec.describe "Viewing details for a Cat" do
   context "registered cat" do
     let!(:registered_cat) { create(:registered_cat) }
 
-    before do
-      visit "/cats/#{registered_cat.id}"
-    end
+    before { visit "/cats/#{registered_cat.id}" }
 
     it "displays the title for the cat" do
       expect(page).to have_content(registered_cat.title.title)
@@ -50,9 +46,7 @@ RSpec.describe "Viewing details for a Cat" do
   end
 
   context "unregistered cat" do
-    before do
-      visit "/cats/#{cat.id}"
-    end
+    before { visit "/cats/#{cat.id}" }
 
     it "doesn't show the registered name label" do
       expect(page).to_not have_content("Registered Name:")
@@ -66,9 +60,7 @@ RSpec.describe "Viewing details for a Cat" do
   context "deceased cat" do
     let(:deceased_cat) { create(:deceased_cat) }
 
-    before do
-      visit "/cats/#{deceased_cat.id}"
-    end
+    before { visit "/cats/#{deceased_cat.id}" }
 
     it "displays the date of death for the cat" do
       expect(page).to have_content(deceased_cat.date_of_death)
@@ -76,15 +68,14 @@ RSpec.describe "Viewing details for a Cat" do
   end
 
   context "living cat" do
-    before do
-      visit "/cats/#{cat.id}"
-    end
+    before { visit "/cats/#{cat.id}" }
 
     it "doesn't show the date of death label" do
       expect(page).to_not have_content("Date of Death:")
     end
   end
 
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
   after do
     Cat.destroy_all
     Breed.destroy_all

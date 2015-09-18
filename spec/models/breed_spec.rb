@@ -7,7 +7,6 @@ RSpec.describe Breed, type: :model do
     should validate_presence_of(:breed_name)
   end
 
-  after do
-    Breed.destroy_all
-  end
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
+  after { Breed.destroy_all }
 end

@@ -35,6 +35,7 @@ RSpec.describe Cat, type: :model do
     end
   end
 
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
   after do
     Cat.destroy_all
     Breed.destroy_all

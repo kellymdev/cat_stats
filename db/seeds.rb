@@ -1,6 +1,6 @@
 #-------------Seed data for Cats-----------------------------------------
 
-# cats = Cat.create([ { pet_name: 'Minnie Louise',
+# cats = Cat.create!([ { pet_name: 'Minnie Louise',
 #                       date_of_birth: '2005-12-01'
 #                     },
 #                     { pet_name: 'Bianca Maree',
@@ -33,7 +33,7 @@
 
 #-------------Seed data for Breeds-----------------------------------------
 
-# breeds = Breed.create([
+# breeds = Breed.create!([
 #                         { breed_name: "Domestic Shorthair"},
 #                         { breed_name: "Exotic Shorthair" },
 #                         { breed_name: "Oriental Cross" },
@@ -45,32 +45,32 @@
 
 # minnie = Cat.find_by_pet_name("Minnie Louise")
 # minnie.breed = Breed.find_by_breed_name("Domestic Shorthair")
-# minnie.save
+# minnie.save!
 
 # bianca = Cat.find_by_pet_name("Bianca Maree")
 # bianca.breed = Breed.find_by_breed_name("Oriental Cross")
-# bianca.save
+# bianca.save!
 
 # spot = Cat.find_by_pet_name("Spot")
 # spot.breed = Breed.find_by_breed_name("Persian")
-# spot.save
+# spot.save!
 
 # madison = Cat.find_by_pet_name("Madison")
 # madison.breed = Breed.find_by_breed_name("Exotic Shorthair")
-# madison.save
+# madison.save!
 
 # mickey = Cat.find_by_pet_name("Mickey")
 # mickey.breed = Breed.find_by_breed_name("Persian")
-# mickey.save
+# mickey.save!
 
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.breed = Breed.find_by_breed_name("Exotic Shorthair")
-# phoebe.save
+# phoebe.save!
 
 
 #-------------Seed data for Coat Colours-----------------------------------------
 
-# colours = CoatColour.create([
+# colours = CoatColour.create!([
 #                               { colour: "Brown Tabby Bicolour"},
 #                               { colour: "Tortoiseshell Tabby Bicolour" },
 #                               { colour: "Blue Harlequin" },
@@ -84,32 +84,32 @@
 
 # minnie = Cat.find_by_pet_name("Minnie Louise")
 # minnie.coat_colour = CoatColour.find_by_colour("Brown Tabby Bicolour")
-# minnie.save
+# minnie.save!
 
 # bianca = Cat.find_by_pet_name("Bianca Maree")
 # bianca.coat_colour = CoatColour.find_by_colour("Tortoiseshell Tabby Bicolour")
-# bianca.save
+# bianca.save!
 
 # spot = Cat.find_by_pet_name("Spot")
 # spot.coat_colour = CoatColour.find_by_colour("Blue Harlequin")
-# spot.save
+# spot.save!
 
 # madison = Cat.find_by_pet_name("Madison")
 # madison.coat_colour = CoatColour.find_by_colour("Blue")
-# madison.save
+# madison.save!
 
 # mickey = Cat.find_by_pet_name("Mickey")
 # mickey.coat_colour = CoatColour.find_by_colour("Blue Bicolour")
-# mickey.save
+# mickey.save!
 
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.coat_colour = CoatColour.find_by_colour("Lilac")
-# phoebe.save
+# phoebe.save!
 
 
 #-------------Seed data for Titles-----------------------------------------
 
-# titles = Title.create([
+# titles = Title.create!([
 #             { title: "Silver Double Grand Premier"},
 #             { title: "Grand Champion" }
 #           ])
@@ -119,16 +119,16 @@
 
 # madison = Cat.find_by_pet_name("Madison")
 # madison.title = Title.find_by_title("Silver Double Grand Premier")
-# madison.save
+# madison.save!
 
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.title = Title.find_by_title("Grand Champion")
-# phoebe.save
+# phoebe.save!
 
 
 #-------------Seed data for Gender-----------------------------------------
 
-# genders = Gender.create([
+# genders = Gender.create!([
 #                           { gender: "Female" },
 #                           { gender: "Male" },
 #                           { gender: "Neuter" },
@@ -143,24 +143,24 @@
 
 # minnie = Cat.find_by_pet_name("Minnie Louise")
 # minnie.gender = spay
-# minnie.save
+# minnie.save!
 
 # bianca = Cat.find_by_pet_name("Bianca Maree")
 # bianca.gender = spay
-# bianca.save
+# bianca.save!
 
 # spot = Cat.find_by_pet_name("Spot")
 # spot.gender = neuter
-# spot.save
+# spot.save!
 
 # mickey = Cat.find_by_pet_name("Mickey")
 # mickey.gender = neuter
-# mickey.save
+# mickey.save!
 
 # madison = Cat.find_by_pet_name("Madison")
 # madison.gender = neuter
-# madison.save
+# madison.save!
 
 # phoebe = Cat.find_by_pet_name("Phoebe Jayne")
 # phoebe.gender = spay
-# phoebe.save
+# phoebe.save!
