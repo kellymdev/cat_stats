@@ -1,28 +1,15 @@
-== README
+== Cat Stats
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A cat record app built in Ruby on Rails, tested with RSpec and Capybara.
 
-Things you may want to cover:
+= Key features:
 
-* Ruby version
+* View a list of all the cats
 
-* System dependencies
+* View a record a for particular cat
 
-* Configuration
+* Create a cat record, including pet_name, date of birth, date of death (if applicable), breed, coat colour, registered name (if applicable), registration number (if applicable), image url
 
-* Database creation
+* Edit a cat record
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Delete a cat record
