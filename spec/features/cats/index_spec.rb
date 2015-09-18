@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe "Viewing the list of Cats" do
   let!(:cat) { create(:registered_cat) }
 
-  before do
-    visit '/cats'
-  end
+  before { visit '/cats' }
+
   it "should have a title of Cats" do
     within('h2') do
       expect(page).to have_content("Cats")
@@ -38,6 +37,7 @@ RSpec.describe "Viewing the list of Cats" do
     end
   end
 
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
   after do
     Cat.destroy_all
     Breed.destroy_all

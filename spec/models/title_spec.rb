@@ -7,7 +7,6 @@ RSpec.describe Title, type: :model do
     should validate_presence_of(:title)
   end
 
-  after do
-    Title.destroy_all
-  end
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
+  after { Title.destroy_all }
 end

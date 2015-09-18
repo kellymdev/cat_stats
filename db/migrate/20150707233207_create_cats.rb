@@ -6,7 +6,6 @@ class CreateCats < ActiveRecord::Migration
       t.string :registration_number
       t.date :date_of_birth
       t.date :date_of_death
-
       t.timestamps null: false
     end
   end

@@ -1,16 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Deleting a cat", :js => true do
-  let(:breed) { build(:breed) }
-  let(:coat_colour) { build(:coat_colour) }
-  let(:gender) { build(:gender) }
+  let(:breed) { create(:breed) }
+  let(:coat_colour) { create(:coat_colour) }
+  let(:gender) { create(:gender) }
+  let(:valid_cat_params) { attributes_for(:registered_cat, breed_id: breed.id, coat_colour_id: coat_colour.id, gender_id: gender.id)}
 
   before do
-    @breed = Breed.create(breed.attributes)
-    @coat_colour = CoatColour.create(coat_colour.attributes)
-    @gender = Gender.create(gender.attributes)
-    @valid_cat_params = attributes_for(:registered_cat, breed_id: @breed.id, coat_colour_id: @coat_colour.id, gender_id: @gender.id)
-    @cat = Cat.create! @valid_cat_params
+    @cat = Cat.create! valid_cat_params
     visit "/cats"
     click_link @cat.pet_name
     accept_prompt(with: "Are you sure?") do
@@ -26,6 +23,7 @@ RSpec.describe "Deleting a cat", :js => true do
     expect(page).to_not have_content(@cat.registered_name)
   end
 
+  # Delete records created by tests as the Capybara javascript tests require transactional_fixtures to be turned off
   after do
     Cat.destroy_all
     Breed.destroy_all
