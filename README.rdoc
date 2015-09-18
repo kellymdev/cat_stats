@@ -1,14 +1,14 @@
-== Cat Stats
+= Cat Stats
 
 A cat record app built in Ruby on Rails, tested with RSpec and Capybara.
 
-= Key features:
+== Key features:
 
 * View a list of all the cats
 
 * View a record a for particular cat
 
-* Create a cat record, including pet_name, date of birth, date of death (if applicable), breed, coat colour, registered name (if applicable), registration number (if applicable), image url
+* Create a cat record, including pet name, date of birth, date of death (if applicable), breed, coat colour, registered name (if applicable), registration number (if applicable), image url
 
 * Edit a cat record
 
