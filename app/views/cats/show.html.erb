@@ -1,5 +1,5 @@
 <div class="cat-image">
-  <%= image_tag(@cat.image_url) %>
+  <%= image_tag(@cat.image_url) if @cat.image_url.present? %>
 </div>
 
 <div class="cat-details">

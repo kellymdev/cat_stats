@@ -25,7 +25,7 @@ RSpec.describe CatsController do
   end
 
   describe "GET #show" do
-    before { get :show, { id: cat.id } }
+    before { get :show, params: { id: cat.id } }
 
     it "should assign @cat to the selected cat" do
       expect(assigns(:cat)).to eq(Cat.find(cat.id))
@@ -54,7 +54,7 @@ RSpec.describe CatsController do
 
   describe "POST #create" do
     context "with valid params" do
-      before { post :create, { cat: valid_cat_params } }
+      before { post :create, params: { cat: valid_cat_params } }
 
       it "creates a new cat" do
         expect(Cat.find_by_registration_number(valid_cat_params[:registration_number])).to be_truthy
@@ -67,7 +67,7 @@ RSpec.describe CatsController do
     end
 
     context "with invalid params" do
-      before { post :create, { cat: { pet_name: "" } } }
+      before { post :create, params: { cat: { pet_name: "" } } }
 
       it "returns http status 400" do
         expect(response).to have_http_status(400)
@@ -85,17 +85,17 @@ RSpec.describe CatsController do
 
     it "deletes the selected cat" do
       expect {
-        delete :destroy, {id: @cat.id}
+        delete :destroy, params: { id: @cat.id }
       }.to change(Cat, :count).by(-1)
     end
 
     it "redirects to the index page" do
-      expect(delete :destroy, {id: @cat.id}).to redirect_to(cats_path)
+      expect(delete :destroy, params: { id: @cat.id }).to redirect_to(cats_path)
     end
   end
 
   describe "GET #edit" do
-    before { get :edit, { id: registered_cat.id } }
+    before { get :edit, params: { id: registered_cat.id } }
 
     it "should return http status 200" do
       expect(response).to have_http_status(200)
@@ -108,7 +108,7 @@ RSpec.describe CatsController do
 
   describe "PUT #update" do
     context "valid params" do
-      before { put :update, { id: registered_cat.id, cat: updated_params } }
+      before { put :update, params: { id: registered_cat.id, cat: updated_params } }
 
       it "should return http status 302" do
         expect(response).to have_http_status(302)
